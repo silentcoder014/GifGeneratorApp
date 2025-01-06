@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Spinner from './Spinner';
-import useGif from '../hooks/useGif';
+// import useGif from '../hooks/useGif';
 
 const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 const Random = () => {
@@ -47,7 +47,7 @@ const Random = () => {
     flex-col items-center gap-y-5 mt-[15px]'>
         <h1 className='text-2xl underline uppercase font-bold pt-2'>A Random GIF</h1>
          {
-          loading ? (<Spinner />) : (<img src={gif} width="450" />)
+          loading ? (<Spinner />) : (<img src={gif} width="450" alt='Nothing'/>)
          }
 
         <button onClick={() => fetchData()}
